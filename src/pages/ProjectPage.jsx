@@ -1,7 +1,15 @@
 import React from "react";
+import { allProjects } from "../data";
 
 function ProjectPage() {
-    return  <h1>This is the project page.</h1>;
+    
+    return (
+    <div>
+    {allProjects.map((projectData, key) => {
+        return <div key={key}>{projectData.title}</div>;
+        })}
+        </div>
+);
 }
 
 export default ProjectPage;

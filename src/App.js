@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <div>
-        <nav />
+        <Nav />
         <Switch>
           <Route path="/projet">
             <ProjectPage />
