@@ -11,7 +11,7 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Route path="/project">
+          <Route path="/project/:id">
             <ProjectPage />
           </Route>
           <Route path="/">
