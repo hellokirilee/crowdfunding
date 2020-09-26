@@ -4,6 +4,7 @@ import Nav from "./components/Nav/Nav";
 import Home from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 import "./App.css";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
           <Route path="/project/:id">
             <ProjectPage />
           </Route>
+          <Route path="/login">
+            <LoginPage />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
@@ -21,6 +25,9 @@ function App() {
       </div>
     </Router>
   );
+
+
+
 }
 
 export default App

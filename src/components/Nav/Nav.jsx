@@ -6,8 +6,13 @@ function Nav() {
         <nav>
             <Link to="/">Home</Link>
             <Link to="/project">Project</Link>
+            <Link to="/login">Login</Link>
         </nav>
     );
+
+
 }
+
+
 
 export default Nav;
