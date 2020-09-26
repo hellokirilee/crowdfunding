@@ -14,6 +14,9 @@ function App() {
           <Route path="/project/:id">
             <ProjectPage />
           </Route>
+          <Route path="/login">
+            <loginPage />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
