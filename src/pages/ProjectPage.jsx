@@ -8,7 +8,7 @@ function ProjectPage() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}content/[id]`, {
+    fetch(`${process.env.REACT_APP_API_URL}content/${id}/`, {
       method: "GET",
       headers: { Authorization: `Token ${getToken()}` },
     })
@@ -16,7 +16,6 @@ function ProjectPage() {
         return results.json();
       })
       .then((data) => {
-        console.log("woooo 2", data);
         setProjectData(data);
       });
   }, [id]);
