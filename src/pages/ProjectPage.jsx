@@ -4,7 +4,11 @@ import getToken from "../utils/getToken";
 
 // console.log("heheheheh", oneProject)
 function ProjectPage() {
-  const [projectData, setProjectData] = useState({ pledges: [] });
+  const [projectData, setProjectData] = useState({
+    pledges: [],
+    images: [],
+    owner: {},
+  });
   const { id } = useParams();
 
   useEffect(() => {
@@ -16,6 +20,11 @@ function ProjectPage() {
         return results.json();
       })
       .then((data) => {
+        // console.log(data.owner.username);
+        // const userData = data.owner;
+        // const pledges = data.pledges;
+        // console.log(typeof userData);
+        // setProjectData({ data: data, owner: userData, pledges: pledges });
         setProjectData(data);
       });
   }, [id]);
@@ -25,6 +34,8 @@ function ProjectPage() {
       <h2>{projectData.title}</h2>
       <h3>Created at: {projectData.date_created}</h3>
       <h3>{`Status: ${projectData.is_open}`}</h3>
+      <h3>Category: {projectData.category}</h3>
+      <h3>Creator: {projectData.owner.username}</h3>
       <h3>Pledges:</h3>
       <ul>
         {projectData.pledges.map((pledgeData, key) => {
@@ -35,6 +46,12 @@ function ProjectPage() {
           );
         })}
       </ul>
+      {/* <ul>
+        {projectData.images.map((imageData) => {
+          return <img src={imageData.content_img} alt="secret" />
+          return <h4>{imageData.content_img_name} </h4>
+
+      </ul> */}
     </div>
   );
 }
