@@ -5,7 +5,7 @@ function JoinPage() {
   return (
     <div>
       <p>test</p>
-      {/* <JoinForm /> */}
+      <JoinForm />
     </div>
   );
 }

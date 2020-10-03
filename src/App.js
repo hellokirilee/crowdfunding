@@ -7,7 +7,6 @@ import "./App.css";
 import LoginPage from "./pages/LoginPage";
 import LogoutPage from "./pages/LogoutPage";
 import JoinPage from "./pages/JoinPage";
-import JoinForm from "./components/JoinForm/JoinForm";
 
 function App() {
   return (
@@ -23,12 +22,12 @@ function App() {
           </Route>
           <Route path="/logout">
             <LogoutPage />
-            <Route path="/join">
-              <JoinForm />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
+          </Route>
+          <Route path="/join">
+            <JoinPage />
+          </Route>
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
       </div>
