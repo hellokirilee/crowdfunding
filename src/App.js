@@ -5,7 +5,6 @@ import Home from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 import "./App.css";
 import LoginPage from "./pages/LoginPage";
-import LogoutPage from "./pages/LogoutPage";
 import JoinPage from "./pages/JoinPage";
 
 function App() {
@@ -19,9 +18,6 @@ function App() {
           </Route>
           <Route path="/login">
             <LoginPage />
-          </Route>
-          <Route path="/logout">
-            <LogoutPage />
           </Route>
           <Route path="/join">
             <JoinPage />

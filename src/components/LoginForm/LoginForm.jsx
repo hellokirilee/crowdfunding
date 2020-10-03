@@ -18,16 +18,13 @@ function LoginForm() {
   };
 
   const postData = async () => {
-    const response = await fetch(
-      `${process.env.REACT_APP_API_URL}api-token-auth/`,
-      {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(credentials),
-      }
-    );
+    const response = await fetch(`${process.env.REACT_APP_API_URL}login/`, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(credentials),
+    });
     return response.json();
   };
   //checks that there is value before submitting
@@ -37,7 +34,10 @@ function LoginForm() {
       postData().then((response) => {
         window.localStorage.setItem("token", response.token);
         window.localStorage.setItem("username", credentials.username);
+        window.localStorage.setItem("user_id", response.user_id);
+        window.localStorage.setItem("is_staff", response.is_staff);
         history.push("/");
+        console.log(response);
       });
     }
   };

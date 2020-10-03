@@ -25,7 +25,9 @@ function ProjectPage() {
         // const pledges = data.pledges;
         // console.log(typeof userData);
         // setProjectData({ data: data, owner: userData, pledges: pledges });
-        setProjectData(data);
+
+        //set blank list for images, to only be called if there is data available to user
+        setProjectData({ images: [], ...data });
       });
   }, [id]);
 
