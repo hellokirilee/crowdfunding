@@ -7,6 +7,7 @@ import "./App.css";
 import LoginPage from "./pages/LoginPage";
 import LogoutPage from "./pages/LogoutPage";
 import JoinPage from "./pages/JoinPage";
+import JoinForm from "./components/JoinForm/JoinForm";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route path="/logout">
             <LogoutPage />
             <Route path="/join">
-              <JoinPage />
+              <JoinForm />
             </Route>
             <Route path="/">
               <Home />
