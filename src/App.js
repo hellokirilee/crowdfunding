@@ -6,6 +6,7 @@ import ProjectPage from "./pages/ProjectPage";
 import "./App.css";
 import LoginPage from "./pages/LoginPage";
 import LogoutPage from "./pages/LogoutPage";
+import JoinPage from "./pages/JoinPage";
 
 function App() {
   return (
@@ -19,11 +20,14 @@ function App() {
           <Route path="/login">
             <LoginPage />
           </Route>
-          <Route path="/">
-            <Home />
-          </Route>
           <Route path="/logout">
             <LogoutPage />
+            <Route path="/join">
+              <JoinPage />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
           </Route>
         </Switch>
       </div>

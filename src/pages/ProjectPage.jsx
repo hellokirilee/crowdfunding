@@ -46,12 +46,16 @@ function ProjectPage() {
           );
         })}
       </ul>
-      {/* <ul>
+      <ul>
         {projectData.images.map((imageData) => {
-          return <img src={imageData.content_img} alt="secret" />
-          return <h4>{imageData.content_img_name} </h4>
-
-      </ul> */}
+          return (
+            <li>
+              <img src={imageData.content_img} alt="secret" />
+              <h4>{imageData.content_img_name} </h4>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
