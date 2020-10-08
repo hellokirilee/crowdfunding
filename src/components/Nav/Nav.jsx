@@ -14,6 +14,7 @@ function Nav() {
       <Link to="/">Home</Link>
       <Link to="/project">Project</Link>
       <Link to="/login">Login</Link>
+      <Link to="/new-project">New Project</Link>
       <button type="submit" onClick={logout}>
         LogOut
       </button>

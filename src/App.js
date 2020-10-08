@@ -6,6 +6,7 @@ import ProjectPage from "./pages/ProjectPage";
 import "./App.css";
 import LoginPage from "./pages/LoginPage";
 import JoinPage from "./pages/JoinPage";
+import NewProjectPage from "./pages/NewProjectPage";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/join">
             <JoinPage />
+          </Route>
+          <Route path="/new-project">
+            <NewProjectPage />
           </Route>
           <Route path="/">
             <Home />
