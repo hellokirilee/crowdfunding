@@ -15,7 +15,6 @@ function ProjectForm() {
     date_created: date.toISOString(),
     is_open: true,
     category: "toe beans",
-    owner: {},
   });
 
   const history = useHistory();
