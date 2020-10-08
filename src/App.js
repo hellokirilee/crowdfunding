@@ -7,6 +7,9 @@ import "./App.css";
 import LoginPage from "./pages/LoginPage";
 import JoinPage from "./pages/JoinPage";
 import NewProjectPage from "./pages/NewProjectPage";
+import PledgeForm from "./components/PledgeForm/PledgeForm";
+import UpdateProfilePage from "./pages/UpdateUserProfilePage";
+import ProjectsByUser from "./pages/ProjectsByUserPage";
 
 function App() {
   return (
@@ -25,6 +28,15 @@ function App() {
           </Route>
           <Route path="/new-project">
             <NewProjectPage />
+          </Route>
+          <Route path="/pledge">
+            <PledgeForm />
+          </Route>
+          <Route path="/profile">
+            <UpdateProfilePage />
+          </Route>
+          <Route path="/users/:id">
+            <ProjectsByUser />
           </Route>
           <Route path="/">
             <Home />

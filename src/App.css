@@ -1,1 +1,22 @@
-#project-list {  display: grid;  grid-template-columns: 30% 30% 30%;  column-gap: 10px;  row-gap: 10px;}
+#project-list {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  margin: auto;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}

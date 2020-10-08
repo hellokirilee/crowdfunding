@@ -1,15 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import getToken from "../utils/getToken";
+import PledgeForm from "../components/PledgeForm/PledgeForm";
+import ImageUpload from "../components/ProjectForm/ImageUpload";
 
 // console.log("heheheheh", oneProject)
 function ProjectPage() {
   const [projectData, setProjectData] = useState({
+    loading: true,
     pledges: [],
     images: [],
     owner: {},
   });
   const { id } = useParams();
+
+  const userId = parseInt(localStorage.getItem("user_id"));
+
+  const goalMet = projectData.pledge_total >= projectData.goal;
+  const isOwner = projectData.owner.id === userId;
+  console.log({ projectData, userId, goalMet, isOwner });
 
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}content/${id}/`, {
@@ -31,28 +40,48 @@ function ProjectPage() {
       });
   }, [id]);
 
+  if (projectData.loading) {
+    return "Loading ...";
+  }
+
   return (
     <div>
       <h2>{projectData.title}</h2>
+      <img src={projectData.image} alt="" />
       <h3>Created at: {projectData.date_created}</h3>
-      <h3>{`Status: ${projectData.is_open}`}</h3>
+      {/* <h3>{`Status: ${projectData.is_open}`}</h3> */}
       <h3>Category: {projectData.category}</h3>
+      <h3>Goal:{projectData.goal}</h3>
+      <h3>Treats Promised:{projectData.pledge_total}</h3>
       <h3>Creator: {projectData.owner.username}</h3>
+      <div style={{ filter: goalMet ? null : "blur(20px)" }}>
+        {projectData.images.map((imageData) => {
+          return (
+            <figure>
+              <img src={imageData.content_img} alt="secret" />
+              <figcaption>Image Name: {imageData.content_img_name}</figcaption>
+            </figure>
+          );
+        })}
+      </div>
+      {/* #need to check that they are project Owner Here */}
+      {isOwner ? <ImageUpload projectId={id} /> : null}
       <h3>Pledges:</h3>
       <ul>
         {projectData.pledges.map((pledgeData, key) => {
           return (
             <li key={key}>
               {pledgeData.amount} from {pledgeData.supporter}
+              <br />
+              {pledgeData.comment}
             </li>
           );
         })}
       </ul>
-      <p>
-        {projectData.images.map((imageData) => {
-          return <img src={imageData.content_img} alt="secret" />;
-        })}
-      </p>
+      <div>
+        <h3>Give me treats</h3>
+        <PledgeForm projectId={id} />
+      </div>
     </div>
   );
 }

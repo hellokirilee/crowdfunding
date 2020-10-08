@@ -36,7 +36,6 @@ function JoinForm() {
       console.log(response);
       window.localStorage.setItem("token", response.token);
       window.localStorage.setItem("username", credentials.username);
-      // window.localStorage.setItem("user_id"), response.id);
       history.push("/login");
     });
   };
