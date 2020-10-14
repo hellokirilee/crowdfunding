@@ -13,7 +13,7 @@ function UserProfile() {
   });
   const [userData, setUserData] = useState({ loading: true });
 
-  const history = useHistory();
+  //const history = useHistory(); - not needed as page being reloaded
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -35,7 +35,7 @@ function UserProfile() {
         setUserProfile(data.profile);
         setUserData(data);
       });
-  }, []);
+  }, [id]);
 
   const postData = async () => {
     const response = await fetch(

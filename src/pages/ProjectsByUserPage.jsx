@@ -24,7 +24,7 @@ function ProjectsByUser() {
           setUserdata(data);
         });
     }
-  }, []);
+  }, [id]);
 
   if (userData.loading) {
     return "Loading ...";

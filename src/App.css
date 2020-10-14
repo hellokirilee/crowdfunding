@@ -1,3 +1,17 @@
+/* "Gunmetal":"022b3a",
+  "Metallic Seaweed":"1f7a8c",
+  "Beau Blue":"bfdbf7",
+  "Lavender Web":"e1e5f2",
+  "White":"ffffff" */
+
+* {
+  background-color: #022b3a;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
 #project-list {
   display: grid;
   grid-template-columns: 30% 30% 30%;
@@ -19,4 +33,110 @@ figcaption {
   font: italic smaller sans-serif;
   padding: 3px;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: noto sans sc, sans-serif;
+  font-size: 2em;
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+a:hover {
+  color: #e1e5f2;
+}
+
+button {
+  background-color: transparent;
+  border-radius: 6px;
+  color: #ffffff;
+  margin: 1em;
+
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #1f7a8c;
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+h1 {
+  font-family: "Gloria Hallelujah", cursive;
+  color: #ffffff;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: "Gloria Hallelujah", cursive;
+  color: #1f7a8c;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-family: "Noto Sans", sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: "Noto Sans", sans-serif;
+  color: #bfdbf7;
+  font-size: 1rem;
+}
+
+ul {
+  font-family: "Noto Sans SC", sans-serif;
+  color: #bfdbf7;
+  font-size: 1rem;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+li {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #1f7a8c;
+  color: #022b3a;
+  font-size: 1rem;
+  font-weight: strong;
+  padding: 5px;
+  border-style: dotted;
+  margin: 5px;
+  border-color: #ffffff;
+  min-width: 30vw;
+}
+
+input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #bfdbf7;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #022b3a;
+}
+
+input:focus {
+  border: 3px solid #1f7a8c;
+}
+
+select {
+  padding: 16px 20px;
+  border: 2px solid #bfdbf7;
+  background-color: #ffffff;
+  color: #022b3a;
 }
