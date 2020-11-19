@@ -20,6 +20,21 @@ function ProjectPage() {
   const isOwner = projectData.owner.id === userId;
   console.log({ projectData, userId, goalMet, isOwner });
 
+  function FormatDate(date) {
+    var date = new Date(date);
+    var options = {
+      year: "numeric",
+      // month: "numeric",
+      month: "long",
+      weekday: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+    };
+    var formattedDate = new Intl.DateTimeFormat("en-AU", options).format(date);
+    return formattedDate;
+  }
+
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}content/${id}/`, {
       method: "GET",
@@ -48,7 +63,7 @@ function ProjectPage() {
     <div>
       <h2>{projectData.title}</h2>
       <img src={projectData.image} alt="" />
-      <h3>Created at: {projectData.date_created}</h3>
+      <h3>Posted on: {FormatDate(projectData.date_created)}</h3>
       {/* <h3>{`Status: ${projectData.is_open}`}</h3> */}
       <h3>Category: {projectData.category}</h3>
       <h3>Goal:{projectData.goal}</h3>
@@ -78,10 +93,7 @@ function ProjectPage() {
           );
         })}
       </ul>
-      <div>
-        <h3>Give me treats</h3>
-        <PledgeForm projectId={id} />
-      </div>
+      <div>{!isOwner ? <PledgeForm projectId={id} /> : null}</div>
     </div>
   );
 }

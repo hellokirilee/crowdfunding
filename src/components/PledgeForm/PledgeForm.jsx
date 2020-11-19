@@ -48,6 +48,7 @@ function PledgeForm({ projectId }) {
   //template
   return (
     <form>
+      <h3>Give me treats</h3>
       <div className="form-box">
         <label htmlFor="amount">amount:</label>
         <input type="number" id="amount" onChange={handleChange} />
