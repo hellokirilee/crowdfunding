@@ -42,7 +42,7 @@ function ImageUpload({ projectId }) {
       history.push(`/`); // hack
       history.push(`/project/${projectId}#upload`);
 
-      //   need to figure out how to make it refresh so it's easier to see image has uploaded
+      //hack has the page refresh so it's easier to see image has uploaded
     });
   };
 

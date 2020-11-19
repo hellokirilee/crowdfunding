@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import getToken from "../../utils/getToken";
 
 //How do I set the Pledge to the Project they have come from?
 
@@ -26,6 +27,7 @@ function PledgeForm({ projectId }) {
     const response = await fetch(`${process.env.REACT_APP_API_URL}pledges/`, {
       method: "post",
       headers: {
+        Authorization: `Token ${getToken()}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(pledge),
@@ -37,6 +39,8 @@ function PledgeForm({ projectId }) {
     e.preventDefault();
     postData().then((response) => {
       console.log(response);
+      alert("Pledge Made!");
+      history.push(`/`); // hack
       history.push(`/project/${projectId}`);
     });
   };

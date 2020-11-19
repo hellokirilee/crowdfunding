@@ -16,7 +16,9 @@ function Nav() {
 
   const logout = () => {
     localStorage.clear();
-    history.push("/");
+    alert("We'll keep your secrets");
+    history.push(`/`); // hack
+    history.push(`/join`);
   };
 
   return (
