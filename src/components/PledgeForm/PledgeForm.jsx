@@ -48,18 +48,20 @@ function PledgeForm({ projectId }) {
   //template
   return (
     <form>
-      <h3>Give me treats</h3>
-      <div className="form-box">
-        <label htmlFor="amount">amount:</label>
-        <input type="number" id="amount" onChange={handleChange} />
+      <div class="web-form">
+        <h3>Give me treats</h3>
+        <div className="form-box">
+          <label htmlFor="amount">amount:</label>
+          <input type="number" id="amount" onChange={handleChange} />
+        </div>
+        <div className="form-box">
+          <label htmlFor="comment">comment</label>
+          <input type="text" id="comment" onChange={handleChange} />
+        </div>
+        <button className="form-submit" type="submit" onClick={handleSubmit}>
+          Give!
+        </button>
       </div>
-      <div className="form-box">
-        <label htmlFor="comment">comment</label>
-        <input type="text" id="comment" onChange={handleChange} />
-      </div>
-      <button className="form-submit" type="submit" onClick={handleSubmit}>
-        Give!
-      </button>
     </form>
   );
 }

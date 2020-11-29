@@ -18,37 +18,45 @@ import ProjectsByUser from "./pages/ProjectsByUserPage";
 function App() {
   return (
     <Router>
-      <div>
-        <Nav />
+      <div id="container">
+        <div id="header">
+          <Nav />
+        </div>
+        <div class="left-sidebar"></div>
         <body>
-          <Switch>
-            <Route path="/project/:id">
-              <ProjectPage />
-            </Route>
-            <Route path="/login">
-              <LoginPage />
-            </Route>
-            <Route path="/join">
-              <JoinPage />
-            </Route>
-            <Route path="/new-project">
-              <NewProjectPage />
-            </Route>
-            <Route path="/pledge">
-              <PledgeForm />
-            </Route>
-            <Route path="/profile">
-              <UpdateProfilePage />
-            </Route>
-            <Route path="/users/:id">
-              <ProjectsByUser />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <div class="main-content">
+            <Switch>
+              <Route path="/project/:id">
+                <ProjectPage />
+              </Route>
+              <Route path="/login">
+                <LoginPage />
+              </Route>
+              <Route path="/join">
+                <JoinPage />
+              </Route>
+              <Route path="/new-project">
+                <NewProjectPage />
+              </Route>
+              <Route path="/pledge">
+                <PledgeForm />
+              </Route>
+              <Route path="/profile">
+                <UpdateProfilePage />
+              </Route>
+              <Route path="/users/:id">
+                <ProjectsByUser />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </div>
         </body>
-        <Footer />
+        <div class="right-sidebar"></div>
+        <div class="footer">
+          <Footer />
+        </div>
       </div>
     </Router>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import getToken from "../../utils/getToken";
+import "./UserProfile.css";
 
 function UserProfile() {
   //variables
@@ -67,37 +68,48 @@ function UserProfile() {
 
   //template
   return (
-    <div>
-      <h1>{userData.username}</h1>
-      <h3>{userData.email}</h3>
+    <div class="web-form">
+      <div class="static-fields">
+        <div class="username">
+          <h1>{userData.username}</h1>
+        </div>
+        <div class="email-section">Your email:</div>
+        <h3 class="email-address">{userData.email}</h3>
+      </div>
       <form>
-        <div className="big-form-box">
-          <label htmlFor="user_bio">About You</label>
-          <input
-            type="text"
-            id="user_bio"
-            onChange={handleChange}
-            value={userProfile.user_bio}
-          />
-        </div>
-        <div className="form-box">
-          <img
-            className="profileImage"
-            src={userProfile.profile_image_url}
-            alt="Profile pic"
-          />
-          <label htmlFor="profile_image_url">Upload Image URL:</label>
-          <input
-            type="URL"
-            id="profile_image_url"
-            onChange={handleChange}
-            value={userProfile.profile_image_url}
-          />
-        </div>
+        <div>
+          <div className="form-box large">
+            <label htmlFor="user_bio">Some things about you:</label>
+            <input
+              type="text"
+              id="user_bio"
+              onChange={handleChange}
+              value={userProfile.user_bio}
+            />
+          </div>
+          <div class="profile-pic">
+            <img
+              className="profileImage"
+              src={userProfile.profile_image_url}
+              alt="Profile pic"
+            />
+          </div>
+          <div className="form-box">
+            <label htmlFor="profile_image_url">
+              Upload an new profile image URL:
+            </label>
+            <input
+              type="URL"
+              id="profile_image_url"
+              onChange={handleChange}
+              value={userProfile.profile_image_url}
+            />
+          </div>
 
-        <button className="form-submit" type="submit" onClick={handleSubmit}>
-          Create!
-        </button>
+          <button className="form-submit" type="submit" onClick={handleSubmit}>
+            Create!
+          </button>
+        </div>
       </form>{" "}
     </div>
   );

@@ -53,32 +53,37 @@ function ProjectForm() {
   //template
   return (
     <form>
-      <div className="form-box">
-        <label htmlFor="title">Title:</label>
-        <input type="text" id="title" onChange={handleChange} />
+      <div class="web-form">
+        <div className="form-box">
+          <label htmlFor="title">Title:</label>
+          <input type="text" id="title" onChange={handleChange} />
+        </div>
+        <div className="form-box large">
+          <label htmlFor="description">Description:</label>
+          <input type="description" id="description" onChange={handleChange} />
+        </div>
+        <div className="form-box">
+          <label htmlFor="image">Image URL:</label>
+          <input type="url" id="image" onChange={handleChange} />
+        </div>
+        <div className="form-box">
+          <label htmlFor="goal">Goal:</label>
+          <input type="text" id="goal" onChange={handleChange} />
+        </div>
+        <div className="form-box">
+          <label htmlFor="image">Cat-egory:</label>
+
+          <select id="category" onChange={handleChange}>
+            <option value="toe beans">toe beans</option>
+            <option value="long boi">long boi</option>
+            <option value="big chonk">big chonk</option>{" "}
+          </select>
+        </div>
+
+        <button className="form-submit" type="submit" onClick={handleSubmit}>
+          Post
+        </button>
       </div>
-      <div className="form-box-large">
-        <label htmlFor="description">Description:</label>
-        <input type="description" id="description" onChange={handleChange} />
-      </div>
-      <div className="form-box">
-        <label htmlFor="image">Image URL:</label>
-        <input type="url" id="image" onChange={handleChange} />
-      </div>
-      <div className="form-box">
-        <label htmlFor="goal">Goal:</label>
-        <input type="text" id="goal" onChange={handleChange} />
-      </div>
-      <div className="form-select">
-        <select id="category" onChange={handleChange}>
-          <option value="toe beans">toe beans</option>
-          <option value="long boi">long boi</option>
-          <option value="big chonk">big chonk</option>
-        </select>
-      </div>
-      <button className="form-submit" type="submit" onClick={handleSubmit}>
-        Post
-      </button>
     </form>
   );
 }

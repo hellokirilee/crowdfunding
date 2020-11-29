@@ -3,8 +3,7 @@ import JoinForm from "../components/JoinForm/JoinForm";
 
 function JoinPage() {
   return (
-    <div>
-      <p>test</p>
+    <div id="join-form">
       <JoinForm />
     </div>
   );

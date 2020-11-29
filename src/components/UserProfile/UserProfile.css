@@ -1,0 +1,39 @@
+/* .profile-pic {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+} */
+
+.static-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  padding: 1em;
+}
+
+.profileImage {
+  width: 200px;
+  padding: 2em;
+}
+
+.email-field {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #bfdbf7;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #022b3a;
+  width: 40em;
+}
+
+.email-section {
+  color: #bfdbf7;
+  font-family: "Gloria Hallelujah", cursive;
+  float: left;
+  text-align: left;
+  font-size: 1.5em;
+  margin-right: 2em;
+  width: 10em;
+}
