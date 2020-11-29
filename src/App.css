@@ -12,6 +12,11 @@
   font-family: "Noto Sans", sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 #project-list {
   display: grid;
   grid-template-columns: 30% 30% 30%;
@@ -140,4 +145,27 @@ select {
   border: 2px solid #bfdbf7;
   background-color: #ffffff;
   color: #022b3a;
+}
+
+#home {
+  display: grid;
+  place-items: center;
+}
+
+#front-page {
+  display: inline-block;
+  justify-content: center;
+  height: 85vh;
+  justify-content: space-around;
+  justify-items: center;
+  justify-self: center;
+  margin: left auto;
+  margin: right auto;
+}
+
+#onlycats-logo {
+  height: 80vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

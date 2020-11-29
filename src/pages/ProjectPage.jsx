@@ -44,6 +44,7 @@ function ProjectPage() {
         return results.json();
       })
       .then((data) => {
+        //keeping this code here as weird things have happened
         // console.log(data.owner.username);
         // const userData = data.owner;
         // const pledges = data.pledges;

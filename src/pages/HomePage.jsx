@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, useHistory, useLocation } from "react-router-dom";
 // import { allProjects } from "../data";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import getToken from "../utils/getToken";
@@ -6,8 +7,19 @@ import getToken from "../utils/getToken";
 function HomePage() {
   //variables
   const [projectList, setProjectList] = useState([]);
+  // const history = useHistory();
+  const location = useLocation();
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const username = localStorage.getItem("username");
   //methods
-  // 'projects' is the end of url - should match API
+  // will return content if logged in, otherwise place holder?
+
+  useEffect(() => {
+    const token = getToken();
+    setLoggedIn(token != null);
+  }, [location]);
+
   useEffect(() => {
     const token = getToken();
     if (token) {
@@ -25,12 +37,27 @@ function HomePage() {
   }, []);
 
   //template
+
   return (
-    <div id="project-list">
-      {projectList.map((projectData, key) => {
-        return <ProjectCard key={key} projectData={projectData} />;
-      })}
-    </div>
+    <>
+      <div id="home">
+        {loggedIn ? (
+          <div id="project-list">
+            {projectList.map((projectData, key) => {
+              return <ProjectCard key={key} projectData={projectData} />;
+            })}
+          </div>
+        ) : (
+          <div id="front-page">
+            <img
+              id="onlycats-logo"
+              src={window.location.origin + "/logo.svg"}
+              alt="Only Cats"
+            />
+          </div>
+        )}
+      </div>
+    </>
   );
 }
 
