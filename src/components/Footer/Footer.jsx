@@ -11,9 +11,9 @@ function Footer() {
 
   return (
     <footer>
-      <Link to="/">Placeholder 1 </Link>
-      <Link to="/">Placeholder 2 </Link>
-      <Link to="/">Placeholder 3 </Link>
+      <h3>
+        <Link to="/about">About OnlyCats</Link>
+      </h3>
     </footer>
   );
 }

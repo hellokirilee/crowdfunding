@@ -81,11 +81,9 @@ function ProjectForm() {
           </select>
         </div>
 
-        <div className="form-box">
-          <button className="form-submit" type="submit" onClick={handleSubmit}>
-            Post
-          </button>
-        </div>
+        <button className="form-submit" type="submit" onClick={handleSubmit}>
+          Post
+        </button>
       </div>
     </form>
   );

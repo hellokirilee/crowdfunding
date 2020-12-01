@@ -11,6 +11,7 @@ import NewProjectPage from "./pages/NewProjectPage";
 import PledgeForm from "./components/PledgeForm/PledgeForm";
 import UpdateProfilePage from "./pages/UpdateUserProfilePage";
 import ProjectsByUser from "./pages/ProjectsByUserPage";
+import AboutPage from "./pages/AboutPage";
 
 // import Nav from "./components/Nav";
 // import "././components/Navbar/Navbar.css";
@@ -34,6 +35,9 @@ function App() {
               </Route>
               <Route path="/join">
                 <JoinPage />
+              </Route>
+              <Route path="/about">
+                <AboutPage />
               </Route>
               <Route path="/new-project">
                 <NewProjectPage />

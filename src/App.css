@@ -50,7 +50,6 @@ a {
   text-decoration: none;
   color: #ffffff;
   font-family: noto sans sc, sans-serif;
-  font-size: 2em;
   font-family: "Noto Sans SC", sans-serif;
 }
 
@@ -58,6 +57,9 @@ a:hover {
   color: #e1e5f2;
 }
 
+nav {
+  font-size: 2em;
+}
 h1 {
   font-family: "Gloria Hallelujah", cursive;
   color: #ffffff;
@@ -167,6 +169,19 @@ footer {
   margin-right: auto;
 }
 
+#about-page h3 {
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+#about-page {
+  display: grid;
+  place-items: center;
+}
+
+#about-page a {
+  font-size: 1em;
+  background-color: transparent;
+}
 nav button {
   background-color: transparent;
 

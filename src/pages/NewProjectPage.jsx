@@ -6,6 +6,7 @@ function NewProjectPage() {
 
   return (
     <div>
+      <h2 class="page-heading">Submit a New project!</h2>
       <ProjectForm />
     </div>
   );

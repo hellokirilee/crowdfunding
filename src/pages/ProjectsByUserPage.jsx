@@ -32,7 +32,7 @@ function ProjectsByUser() {
   //template
   return (
     <div id="show-profile">
-      <h1>{userData.username}</h1>
+      <h2>Projects by {userData.username}</h2>
       <h3>{userData.email}</h3>
 
       <img
