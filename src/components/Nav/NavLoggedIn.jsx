@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import getToken from "../../utils/getToken";
-import NavLoggedIn from "./NavLoggedIn";
-import NavLoggedOut from "./NavLoggedOut";
 
-function Nav() {
+function NavLoggedIn() {
   const history = useHistory();
   const location = useLocation();
   const [loggedIn, setLoggedIn] = useState(false);
@@ -23,7 +21,16 @@ function Nav() {
     history.push(`/join`);
   };
 
-  return <>{loggedIn ? <NavLoggedIn /> : <NavLoggedOut />}</>;
+  return (
+    <nav>
+      <Link to="/">Home</Link>
+      <Link to="/new-project">New Project</Link>
+      <Link to="/profile">{username}</Link>
+      <button type="submit" onClick={logout}>
+        LogOut
+      </button>
+    </nav>
+  );
 }
 
-export default Nav;
+export default NavLoggedIn;

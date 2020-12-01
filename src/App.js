@@ -12,6 +12,7 @@ import PledgeForm from "./components/PledgeForm/PledgeForm";
 import UpdateProfilePage from "./pages/UpdateUserProfilePage";
 import ProjectsByUser from "./pages/ProjectsByUserPage";
 import AboutPage from "./pages/AboutPage";
+import ListOfUsers from "./components/ListOfUsers/ListOfUsers";
 
 // import Nav from "./components/Nav";
 // import "././components/Navbar/Navbar.css";
@@ -50,6 +51,9 @@ function App() {
               </Route>
               <Route path="/users/:id">
                 <ProjectsByUser />
+              </Route>
+              <Route path="/userprofiles">
+                <ListOfUsers />
               </Route>
               <Route path="/">
                 <Home />
