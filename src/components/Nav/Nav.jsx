@@ -24,8 +24,15 @@ function Nav() {
   return (
     <nav>
       <Link to="/">Home</Link>
-      <Link to="/project">Project</Link>
-      <Link to="/new-project">New Project</Link>
+      <Link to="/project">Browse Cat-ent</Link>
+      {loggedIn ? (
+        <>
+          <Link to="/new-project">New Project</Link>
+        </>
+      ) : (
+        <Link to="/login">Login</Link>
+      )}
+
       {loggedIn ? (
         <>
           <Link to="/profile">{username}</Link>
@@ -34,7 +41,7 @@ function Nav() {
           </button>
         </>
       ) : (
-        <Link to="/login">Login</Link>
+        <Link to="/join">Join</Link>
       )}
     </nav>
   );

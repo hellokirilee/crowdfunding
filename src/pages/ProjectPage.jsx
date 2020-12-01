@@ -61,9 +61,11 @@ function ProjectPage() {
   }
 
   return (
-    <div>
+    <div id="project-page">
       <h2>{projectData.title}</h2>
-      <img src={projectData.image} alt="" />
+      <div class="project-cover-img">
+        <img src={projectData.image} alt="" />
+      </div>
       <h3>Posted on: {FormatDate(projectData.date_created)}</h3>
       {/* <h3>{`Status: ${projectData.is_open}`}</h3> */}
       <h3>Category: {projectData.category}</h3>

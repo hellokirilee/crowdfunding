@@ -186,7 +186,7 @@ nav button {
   background-color: transparent;
 
   color: #ffffff;
-  margin: 1em;
+
   color: white;
   padding: 12px 20px;
   text-align: center;
@@ -423,10 +423,10 @@ select {
 /* On screens that are 600px or less*/
 
 @media screen and (max-width: 600px) {
-  /* #container {
+  #container {
     display: grid;
-    grid-template: auto 1fr auto / auto 1fr auto;
-  } */
+    grid-template: auto auto auto / auto 95% auto;
+  }
 
   #header {
     padding: 2rem;
@@ -449,24 +449,51 @@ select {
   .footer {
     grid-column: 1 / 4;
   }
-  /* 
 
-  responsive design needed here 
   nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 1vpw;
+    align-content: flex-end;
   }
 
-  footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  nav button {
+    text-align: center;
+    font-size: 12px;
+    align-self: auto;
   }
 
-*/
+  nav a {
+    padding: 0.25em;
+    font-size: 12px;
+  }
+
   #onlycats-logo {
     display: flex;
     width: 400px;
+  }
+
+  #project-list {
+    display: grid;
+    grid-template-columns: 90%;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  #main-content {
+    max-width: 70%;
+  }
+  #project-page {
+    max-width: 70%;
+  }
+
+  #project-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .project-cover-img img {
+    max-width: 90%;
   }
 }
