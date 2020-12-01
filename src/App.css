@@ -2,7 +2,21 @@
   "Metallic Seaweed":"1f7a8c",
   "Beau Blue":"bfdbf7",
   "Lavender Web":"e1e5f2",
-  "White":"ffffff" */
+  "White":"ffffff"
+  
+  
+    Feature Font
+    font-family: "Gloria Hallelujah", cursive;
+
+    Text Blocks
+    font-family: "Noto Sans", sans-serif;
+
+    Some Headings
+    font-family: "Noto Sans SC", sans-serif;
+    
+    
+    
+    */
 
 * {
   background-color: #022b3a;
@@ -174,23 +188,33 @@ nav button {
 /* Form Styling */
 
 form {
-  display: flex;
+  display: inline-block;
+  height: 80vh;
   justify-content: space-around;
+  align-content: space-between;
 }
 
 .form-box {
+  padding: 1em;
+  justify-content: stretch;
+}
+
+.form-box-large {
   padding: 1em;
   justify-items: stretch;
   justify-content: space-between;
 }
 
-.form-box large {
+.form-box-category {
+  display: flex;
+  flex-direction: row;
   padding: 1em;
-  justify-items: stretch;
+  justify-items: space-between;
+  justify-content: stretch;
 }
 
 input #description {
-  height: 5em;
+  height: 5vh;
 }
 
 form {
@@ -202,12 +226,14 @@ form {
 .web-form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
 }
 
 label {
   display: flex;
-  align-self: center;
+  /* align-self: center; */
   float: left;
   text-align: left;
   vertical-align: auto;
@@ -227,6 +253,8 @@ button:hover {
 }
 
 input {
+  display: flex;
+  justify-self: stretch;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -234,7 +262,9 @@ input {
   border-radius: 4px;
   background-color: #ffffff;
   color: #022b3a;
-  width: 40em;
+  width: 100%;
+
+  font-family: "Noto Sans", sans-serif;
 }
 
 .category select {
@@ -246,10 +276,19 @@ input {
   background-color: #ffffff;
   color: #022b3a;
   width: 40em;
+  padding: 12px 20px;
+  margin: 8px 0;
+  text-align: end;
+}
+
+.option {
+  text-align: end;
 }
 
 select {
-  width: 20em;
+  text-decoration: none;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 1.5em;
 }
 
 input:focus {
@@ -276,6 +315,8 @@ input:focus {
 
 select {
   float: right;
+  display: flex;
+  align-items: flex-start;
 }
 
 .form-submit {
@@ -295,4 +336,124 @@ select {
   text-transform: uppercase;
   align-self: flex-end;
   float: right;
+}
+
+/* On screens that are 600px or more*/
+
+@media screen and (min-width: 1200px) {
+  .web-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
+  .form-submit {
+    align-self: flex-start;
+  }
+  .form-box {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex;
+  }
+
+  .form-box-large {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-box-category {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    justify-items: space-between;
+    justify-content: space-between;
+    width: 800px;
+  }
+
+  button:hover {
+    background-color: #1f7a8c;
+    border-radius: 6px;
+    color: #ffffff;
+  }
+
+  input {
+    padding: 12px 20px;
+    margin: 8px 0;
+
+    width: 800px;
+  }
+
+  .category select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #bfdbf7;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #022b3a;
+    width: 40em;
+    padding: 12px 20px;
+    margin: 8px 0;
+    text-align: end;
+  }
+
+  .option {
+    text-align: end;
+  }
+  /* 
+  select {
+    text-decoration: none;
+    font-family: "Gloria Hallelujah", cursive;
+    font-size: 1.5em;
+  }
+
+  input:focus {
+    border: 3px solid #1f7a8c;
+  }
+
+  select {
+    padding: 12px 20px;
+
+    border: 2px solid #bfdbf7;
+    background-color: #ffffff;
+    color: #022b3a;
+  }
+
+  textarea:focus,
+  input:focus {
+    border: 2px solid #900;
+  }
+
+  .form-select {
+    display: flex;
+    justify-content: center;
+  }
+
+  select {
+    float: right;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .form-submit {
+    background-color: transparent;
+    border-radius: 6px;
+    color: #ffffff;
+    margin: 1em;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    align-self: flex-end;
+    float: right;
+  } */
 }

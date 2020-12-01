@@ -58,7 +58,7 @@ function ProjectForm() {
           <label htmlFor="title">Title:</label>
           <input type="text" id="title" onChange={handleChange} />
         </div>
-        <div className="form-box large">
+        <div className="form-box-large">
           <label htmlFor="description">Description:</label>
           <input type="description" id="description" onChange={handleChange} />
         </div>
@@ -70,7 +70,8 @@ function ProjectForm() {
           <label htmlFor="goal">Goal:</label>
           <input type="text" id="goal" onChange={handleChange} />
         </div>
-        <div className="form-box">
+
+        <div className="form-box-category">
           <label htmlFor="image">Cat-egory:</label>
 
           <select id="category" onChange={handleChange}>
@@ -80,9 +81,11 @@ function ProjectForm() {
           </select>
         </div>
 
-        <button className="form-submit" type="submit" onClick={handleSubmit}>
-          Post
-        </button>
+        <div className="form-box">
+          <button className="form-submit" type="submit" onClick={handleSubmit}>
+            Post
+          </button>
+        </div>
       </div>
     </form>
   );
