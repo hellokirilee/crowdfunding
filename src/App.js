@@ -22,7 +22,7 @@ function App() {
         <div id="header">
           <Nav />
         </div>
-        <div class="left-sidebar"></div>
+        <div class="left-sidebar"> </div>
         <body>
           <div class="main-content">
             <Switch>
@@ -53,7 +53,7 @@ function App() {
             </Switch>
           </div>
         </body>
-        <div class="right-sidebar"></div>
+        <div class="right-sidebar"> </div>
         <div class="footer">
           <Footer />
         </div>

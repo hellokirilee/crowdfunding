@@ -403,57 +403,55 @@ select {
   .option {
     text-align: end;
   }
-  /* 
-  select {
-    text-decoration: none;
-    font-family: "Gloria Hallelujah", cursive;
-    font-size: 1.5em;
-  }
+}
 
-  input:focus {
-    border: 3px solid #1f7a8c;
-  }
+/* On screens that are 600px or less*/
 
-  select {
-    padding: 12px 20px;
-
-    border: 2px solid #bfdbf7;
-    background-color: #ffffff;
-    color: #022b3a;
-  }
-
-  textarea:focus,
-  input:focus {
-    border: 2px solid #900;
-  }
-
-  .form-select {
-    display: flex;
-    justify-content: center;
-  }
-
-  select {
-    float: right;
-    display: flex;
-    align-items: flex-start;
-  }
-
-  .form-submit {
-    background-color: transparent;
-    border-radius: 6px;
-    color: #ffffff;
-    margin: 1em;
-    color: white;
-    padding: 12px 20px;
-    text-align: center;
-    font-size: 16px;
-    -webkit-transition-duration: 0.4s;
-
-    transition-duration: 0.4s;
-    cursor: pointer;
-    text-decoration: none;
-    text-transform: uppercase;
-    align-self: flex-end;
-    float: right;
+@media screen and (max-width: 600px) {
+  /* #container {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
   } */
+
+  #header {
+    padding: 2rem;
+    grid-column: 1 / 4;
+    justify-self: stretch;
+  }
+
+  .left-sidebar {
+    grid-column: 1 / 2;
+  }
+
+  .main {
+    grid-column: 2 / 3;
+  }
+
+  .right-sidebar {
+    grid-column: 3 / 4;
+  }
+
+  .footer {
+    grid-column: 1 / 4;
+  }
+  /* 
+
+  responsive design needed here 
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+*/
+  #onlycats-logo {
+    display: flex;
+    width: 400px;
+  }
 }
