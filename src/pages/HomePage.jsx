@@ -54,6 +54,7 @@ function HomePage() {
               src={window.location.origin + "/logo.svg"}
               alt="Only Cats"
             />
+            <h3>'OnlyCats' - for when you need a good purr.</h3>
           </div>
         )}
       </div>

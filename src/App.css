@@ -63,31 +63,37 @@ nav {
 h1 {
   font-family: "Gloria Hallelujah", cursive;
   color: #ffffff;
-  font-size: 4rem;
+  font-size: 4em;
 }
 
 h2 {
   font-family: "Gloria Hallelujah", cursive;
   color: #1f7a8c;
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 
 h3 {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans";
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.5em;
+}
+
+h4 {
+  font-family: "Gloria Hallelujah", cursive;
+  color: #1f7a8c;
+  font-size: 1.25em;
 }
 
 p {
   font-family: "Noto Sans", sans-serif;
   color: #bfdbf7;
-  font-size: 1rem;
+  font-size: 1.5vw;
 }
 
 ul {
   font-family: "Noto Sans SC", sans-serif;
   color: #bfdbf7;
-  font-size: 1rem;
+  font-size: 1em;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -144,6 +150,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  font-size: 1vw;
 }
 
 #home {
@@ -162,8 +169,15 @@ footer {
   margin: right auto;
 }
 
+#front-page h3 {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 1em;
+  text-align: center;
+  color: #bfdbf7;
+}
+
 #onlycats-logo {
-  height: 80vh;
+  height: 70vh;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -174,13 +188,28 @@ footer {
 }
 
 #about-page {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
+#about-page p {
+  text-align: left;
+  align-self: center;
+  width: 90%;
+}
 #about-page a {
   font-size: 1em;
   background-color: transparent;
+}
+
+#project-page h3 {
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+#project-page h4 {
+  color: #fff;
 }
 nav button {
   background-color: transparent;
@@ -202,10 +231,24 @@ nav button {
 
 /* Form Styling */
 
+/* Two form stylings here - at this point I'm not ready to mess with it */
 form {
   display: inline-block;
   height: 80vh;
   justify-content: space-around;
+  align-content: space-between;
+}
+
+form {
+  display: flex;
+  align-content: flex-start;
+  justify-content: space-around;
+}
+
+#upload form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-content: space-between;
 }
 
@@ -242,10 +285,22 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  /* align-content: center; */
   width: 100%;
 }
 
+.inner-web-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+}
+
+.inner-web-form p {
+  width: 100%;
+  max-width: 800px;
+}
 label {
   display: flex;
   /* align-self: center; */

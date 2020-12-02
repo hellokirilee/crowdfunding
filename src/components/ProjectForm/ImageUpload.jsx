@@ -48,7 +48,15 @@ function ImageUpload({ projectId }) {
 
   //template
   return (
-    <form id="upload">
+    <form class="inner-web-form">
+      <h4>Kitties, show us your piccies!</h4>
+      <div className="form-box">
+        <p>
+          Upload images here. A sneak preview will show when someone makes a
+          pledge. But the photo will only display in full once your goal has
+          been met!
+        </p>
+      </div>
       <div className="form-box">
         <label htmlFor="content_img_name">File Name:</label>
         <input type="text" id="content_img_name" onChange={handleChange} />

@@ -63,7 +63,7 @@ function UserProfile() {
   };
 
   if (userData.loading) {
-    return "Loading";
+    return <h2>"Loading ..."</h2>;
   }
 
   //template
